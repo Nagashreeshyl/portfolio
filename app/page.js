@@ -54,7 +54,7 @@ export default function Home() {
           <span className="rule" />
           <span className="count">{pad(projects.length)}</span>
         </div>
-        <ProjectIndex projects={projects.map(({ slug, title, tagline, category, pushedAt }) => ({ slug, title, tagline, category, pushedAt }))} />
+        <ProjectIndex projects={projects.map(({ slug, title, tagline, category, pushedAt, live }) => ({ slug, title, tagline, category, pushedAt, live: !!live, shot: live?.shot ?? null }))} />
       </section>
 
       <section id="skills" className="wrap section" aria-labelledby="skills-h">

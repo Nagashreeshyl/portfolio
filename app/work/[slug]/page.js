@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { projects, fmtDate, year, pad } from '../../lib';
 import Cover from '../../components/Cover';
+import LivePreview from '../../components/LivePreview';
 
 export const dynamicParams = false;
 
@@ -53,13 +54,15 @@ export default async function Project({ params }) {
             <p>Started {fmtDate(p.createdAt)}<br />Last commit {fmtDate(p.pushedAt)}</p>
           </div>
           <div className="links">
-            <a href={p.url} target="_blank" rel="noreferrer">Source on GitHub ↗</a>
-            {p.homepage && <a href={p.homepage} target="_blank" rel="noreferrer">Live site ↗</a>}
+            {p.live && <a href={p.live.url} target="_blank" rel="noreferrer">Visit live site ↗</a>}
+            {p.private ? <span className="muted">Private repository</span> : <a href={p.url} target="_blank" rel="noreferrer">Source on GitHub ↗</a>}
           </div>
         </aside>
 
         <div className="body">
-          <div className="hero-in" style={{ '--d': 4 }}><Cover p={p} n={i + 1} className="cover-lg" /></div>
+          <div className="hero-in" style={{ '--d': 4 }}>
+            {p.live && (p.live.shot || p.live.embeddable) ? <LivePreview live={p.live} title={p.title} /> : <Cover p={p} n={i + 1} className="cover-lg" />}
+          </div>
           {p.summary && (<section data-reveal><h2>Overview</h2><p className="big">{p.summary}</p></section>)}
           {p.problem && (<section data-reveal><h2>The problem</h2><p>{p.problem}</p></section>)}
           {p.howItWorks.length > 0 && (

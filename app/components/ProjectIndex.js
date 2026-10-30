@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { pad, year } from '../format';
 import Cover from './Cover';
 
@@ -29,7 +30,7 @@ export default function ProjectIndex({ projects }) {
           <li key={p.slug} data-reveal style={{ '--d': i % 6 }}>
             <Link href={`/work/${p.slug}`} className="row" onMouseEnter={() => setActive(i)} onFocus={() => setActive(null)}>
               <span className="num">{pad(i + 1)}</span>
-              <span className="row-title">{p.title}</span>
+              <span className="row-title">{p.title}{p.live && <span className="live-tag">Live</span>}</span>
               <span className="row-tag">{p.tagline}</span>
               <span className="row-meta row-cat">{p.category}</span>
               <span className="row-meta">{year(p.pushedAt)}</span>
@@ -39,7 +40,9 @@ export default function ProjectIndex({ projects }) {
         ))}
       </ol>
       <div className={`preview${active !== null ? ' on' : ''}`} ref={card} aria-hidden>
-        {projects.map((p, i) => <Cover key={p.slug} p={p} n={i + 1} className={i === active ? 'show' : ''} />)}
+        {projects.map((p, i) => p.shot
+          ? <Image key={p.slug} src={p.shot} alt="" fill sizes="340px" className={`shot${i === active ? ' show' : ''}`} />
+          : <Cover key={p.slug} p={p} n={i + 1} className={i === active ? 'show' : ''} />)}
       </div>
     </div>
   );

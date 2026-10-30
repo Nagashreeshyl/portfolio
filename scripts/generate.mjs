@@ -1,12 +1,18 @@
 // Reads GitHub (profile README + own repos), has a free LLM write the copy, saves content/portfolio.json.
 // Only repos whose pushed_at changed are rewritten, to stay inside free-tier limits.
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { pathToFileURL } from 'node:url';
+import { readFile, writeFile, mkdir, stat, rm } from 'node:fs/promises';
+import { pathToFileURL, fileURLToPath } from 'node:url';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 
 export const USER = 'Nagashreeshyl';
 const OUT = new URL('../content/portfolio.json', import.meta.url);
 // The portfolio's own repo shouldn't list itself as a project.
 const SITE_REPO = process.env.GITHUB_REPOSITORY?.split('/')[1];
+// Private repos to feature anyway. Needs GH_READ_TOKEN with read access to them; their source link is hidden on the site.
+const PRIVATE_REPOS = ['vachlabs'];
+const SHOTS = new URL('../public/shots/', import.meta.url);
+const TOKEN = process.env.GH_READ_TOKEN || process.env.GITHUB_TOKEN;
 
 // Tried in order; free model lineups change often, edit here when one disappears.
 const PROVIDERS = [
@@ -23,7 +29,7 @@ async function gh(path, raw = false) {
   const res = await fetch(`https://api.github.com${path}`, {
     headers: {
       Accept: raw ? 'application/vnd.github.raw+json' : 'application/vnd.github+json',
-      ...(process.env.GITHUB_TOKEN && { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }),
+      ...(TOKEN && { Authorization: `Bearer ${TOKEN}` }),
     },
   });
   if (res.status === 404) return null;
@@ -172,10 +178,14 @@ Return JSON: { "groups": [{ "name": "category", "skills": [{ "name": "clean name
 
 // ---------- pure helpers (tested) ----------
 
-// README-linked repos first, in the order written; the rest by last push.
+// Repos the README mentions come first, in the order it first mentions them (link or plain name); the rest by last push.
 export function orderRepos(repos, readme) {
-  const linked = [...readme.matchAll(new RegExp(`github\\.com/${USER}/([\\w.-]+)`, 'gi'))].map((m) => m[1].toLowerCase());
-  const rank = (r) => { const i = linked.indexOf(r.name.toLowerCase()); return i < 0 ? Infinity : i; };
+  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const rank = (r) => {
+    const hits = [new RegExp(`github\\.com/${USER}/${esc(r.name)}\\b`, 'i'), new RegExp(`\\b${esc(r.name)}\\b`, 'i')]
+      .map((re) => readme.search(re)).filter((i) => i >= 0);
+    return hits.length ? Math.min(...hits) : Infinity;
+  };
   return [...repos].sort((a, b) => rank(a) - rank(b) || b.pushed_at.localeCompare(a.pushed_at));
 }
 
@@ -203,6 +213,38 @@ export function uniqueSkills(lists) {
   return [...seen.values()];
 }
 
+// ---------- live sites ----------
+
+// Sites that forbid framing get a screenshot only; the rest can also be tried inline.
+export function canEmbed(headers) {
+  if (headers.get('x-frame-options')) return false;
+  const fa = headers.get('content-security-policy')?.match(/frame-ancestors([^;]*)/i)?.[1].trim();
+  return !fa || fa.split(/\s+/).includes('*');
+}
+
+const CHROMES = [process.env.CHROME_PATH, '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', 'google-chrome', 'google-chrome-stable', 'chromium'].filter(Boolean);
+
+async function screenshot(url, file) {
+  for (const bin of CHROMES) {
+    try {
+      await promisify(execFile)(bin, ['--headless=new', '--no-sandbox', '--hide-scrollbars', '--window-size=1440,900', '--timeout=12000', `--screenshot=${file}`, url], { timeout: 60_000 });
+      // A near-empty PNG is a blank page (content still animating in); embeddable sites then show live instead.
+      if ((await stat(file)).size > 15_000) return true;
+      await rm(file);
+      return false;
+    } catch { /* try the next binary */ }
+  }
+  return false;
+}
+
+async function liveSite(slug, url) {
+  const res = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(20_000) }).catch(() => null);
+  if (!res?.ok) return { live: null };
+  await mkdir(SHOTS, { recursive: true });
+  const ok = await screenshot(url, fileURLToPath(new URL(`${slug}.png`, SHOTS)));
+  return { live: { url, embeddable: canEmbed(res.headers), shot: ok ? `/shots/${slug}.png` : null, checkedAt: new Date().toISOString() } };
+}
+
 // ---------- main ----------
 
 async function main() {
@@ -215,8 +257,10 @@ async function main() {
     gh(`/repos/${USER}/${USER}/readme`, true),
     gh(`/users/${USER}/repos?per_page=100&type=owner`),
   ]);
+  const featured = (await Promise.all(PRIVATE_REPOS.map((n) => gh(`/repos/${USER}/${n}`)))).filter(Boolean);
+  if (featured.length < PRIVATE_REPOS.length) console.warn('some PRIVATE_REPOS are not readable with this token, skipped');
   const repos = orderRepos(
-    allRepos.filter((r) => !r.fork && !r.archived && !r.private && r.name !== USER && r.name !== SITE_REPO),
+    [...allRepos.filter((r) => !r.fork && !r.archived && !r.private && r.name !== USER && r.name !== SITE_REPO), ...featured],
     readme ?? '',
   );
 
@@ -242,22 +286,27 @@ async function main() {
       slug: repo.name,
       url: repo.html_url,
       homepage: repo.homepage || null,
+      private: repo.private,
       stars: repo.stargazers_count,
       createdAt: repo.created_at,
       pushedAt: repo.pushed_at,
     };
-    if (old?.ai && old.pushedAt === repo.pushed_at) { projects.push({ ...old, ...facts }); continue; }
+    // Re-check the live site when the repo or its Website field changes; shortcut: unchanged repos keep their old screenshot, delete public/shots/<repo>.png to force one.
+    const fresh = old?.pushedAt === repo.pushed_at && old?.homepage === facts.homepage;
+    const live = fresh && old.live !== undefined ? { live: old.live } : facts.homepage ? await liveSite(repo.name, facts.homepage) : { live: null };
+    if (!fresh || JSON.stringify(live.live) !== JSON.stringify(old.live)) changed = true;
+    if (old?.ai && old.pushedAt === repo.pushed_at) { projects.push({ ...old, ...facts, ...live }); continue; }
     try {
       console.log(`✎ ${repo.name}`);
       const m = await repoMaterial(repo);
       const total = Object.values(m.languages).reduce((a, b) => a + b, 0) || 1;
       const languages = Object.entries(m.languages).map(([name, bytes]) => ({ name, pct: Math.round((bytes / total) * 1000) / 10 }));
-      projects.push({ ...facts, languages, ...(await writeProject(repo, m)), ai: true });
+      projects.push({ ...facts, ...live, languages, ...(await writeProject(repo, m)), ai: true });
     } catch (e) {
       // Never drop a project because a free model hiccuped: keep the old copy, or fall back to GitHub's own text.
       console.warn(`${repo.name} not rewritten (${e.message})`);
-      projects.push(old ? { ...old, ...facts } : {
-        ...facts, languages: repo.language ? [{ name: repo.language, pct: 100 }] : [],
+      projects.push(old ? { ...old, ...facts, ...live } : {
+        ...facts, ...live, languages: repo.language ? [{ name: repo.language, pct: 100 }] : [],
         title: repo.name, tagline: repo.description ?? '', summary: repo.description ?? '',
         problem: '', howItWorks: [], highlights: [], stack: repo.language ? [repo.language] : [], category: 'Tools', ai: false,
       });

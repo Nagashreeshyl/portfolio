@@ -1,23 +1,23 @@
 {
-  "updatedAt": "2026-10-30T21:09:47.327Z",
-  "profileVersion": "2026-10-11T20:31:06Z",
+  "updatedAt": "2026-10-30T21:21:24.574Z",
+  "profileVersion": "2026-10-30T21:18:58Z",
   "profile": {
     "name": "Naga Shreeshyl",
-    "headline": "voice agents, automation, full-stack products",
+    "headline": "voice agents, automation, full-stack",
     "intro": "I build voice agents, automation workflows, and full‑stack products. I am a BCA (AI & ML) student at Dayananda Sagar College in Bengaluru and an agentic AI intern at Yellow Metal, where I design and ship production voice agents.",
     "education": "BCA (AI & ML), Dayananda Sagar College, Bengaluru",
     "now": [
       {
-        "title": "Yellow Metal",
-        "body": "I develop outbound calling agents that combine speech‑to‑text, text‑to‑speech, and LLM reasoning, integrating them with workflow tools to automate follow‑ups on Indian phone lines."
+        "title": "VachLabs",
+        "body": "I maintain VachLabs, a self‑hosted voice AI platform forked from Dograh, with a new dashboard UI, Firebase Google sign‑in, superadmin impersonation, visual workflow builder, WebRTC test calls, and telephony integration via Twilio, Vonage, Telnyx, Plivo, and Asterisk."
+      },
+      {
+        "title": "Voice agents at Yellow Metal",
+        "body": "As an intern I build outbound calling agents that combine speech‑to‑text, text‑to‑speech, and LLM reasoning, linking calls to workflow tools for automated follow‑ups, focusing on Indian language support and real phone line reliability."
       },
       {
         "title": "AI automation for Indian SMEs",
-        "body": "Together with a sales co‑founder, I am building voice‑agent and workflow‑automation services for small and mid‑sized businesses."
-      },
-      {
-        "title": "Yogstra",
-        "body": "As founder, I am creating a yoga platform that unites teachers, academies, competitions, and live classes, handling product, design, and engineering."
+        "body": "Together with a sales co‑founder I develop voice‑agent and workflow‑automation services tailored for small and mid‑sized businesses in India."
       }
     ],
     "stack": [
@@ -28,6 +28,11 @@
       "Next.js",
       "Vite",
       "Tailwind CSS",
+      "FastAPI",
+      "Pipecat",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
       "Supabase",
       "Firebase",
       "Razorpay",
@@ -39,13 +44,271 @@
       "Dograh",
       "Sarvam"
     ],
-    "availability": "I am open to remote AI and automation work, especially projects involving voice or agentic technology.",
+    "availability": "Open to remote AI and automation work, especially in voice or agentic projects.",
     "email": "nagashreeshyl@gmail.com",
     "linkedin": "https://www.linkedin.com/in/nagashreeshyl",
     "avatar": "https://avatars.githubusercontent.com/u/200495319?v=4",
     "github": "https://github.com/Nagashreeshyl"
   },
   "projects": [
+    {
+      "slug": "vachlabs",
+      "url": "https://github.com/Nagashreeshyl/vachlabs",
+      "homepage": null,
+      "private": true,
+      "stars": 0,
+      "createdAt": "2026-08-23T18:08:29Z",
+      "pushedAt": "2026-09-21T16:26:30Z",
+      "live": null,
+      "languages": [
+        {
+          "name": "Python",
+          "pct": 61.1
+        },
+        {
+          "name": "TypeScript",
+          "pct": 35
+        },
+        {
+          "name": "Shell",
+          "pct": 2
+        },
+        {
+          "name": "JavaScript",
+          "pct": 0.9
+        },
+        {
+          "name": "PowerShell",
+          "pct": 0.5
+        },
+        {
+          "name": "CSS",
+          "pct": 0.2
+        },
+        {
+          "name": "Dockerfile",
+          "pct": 0.2
+        },
+        {
+          "name": "Go Template",
+          "pct": 0.1
+        },
+        {
+          "name": "Mako",
+          "pct": 0
+        }
+      ],
+      "title": "VachLabs",
+      "tagline": "Self‑hosted voice AI platform for building and deploying conversational agents",
+      "summary": "VachLabs provides a visual workflow editor, WebRTC browser testing, and telephony integrations for creating voice assistants. It runs as a full Docker stack with API, UI, PostgreSQL, Redis and MinIO, and supports Firebase authentication. The platform is a fork of Dograh with an updated dashboard and admin features.",
+      "problem": "Teams that need voice assistants often rely on cloud‑only services or fragmented tooling, making it hard to host, customize, and manage the entire stack on their own infrastructure.",
+      "howItWorks": [
+        "A Next.js dashboard lets users design voice agent workflows with nodes, tools, and transitions.",
+        "The backend, built with FastAPI and ARQ workers, executes the defined workflows and communicates with LLM, STT, and TTS providers.",
+        "WebRTC enables direct voice testing from the browser, while Twilio, Vonage, Telnyx, Plivo, and Asterisk ARI support telephony channels.",
+        "Firebase provides email/password and Google sign‑in, with SSR‑safe cookie synchronization.",
+        "All components are orchestrated via Docker Compose, including PostgreSQL (pgvector), Redis, and MinIO for storage."
+      ],
+      "highlights": [
+        "Visual workflow builder with global instructions and tool integration",
+        "Browser‑based voice testing via WebRTC",
+        "Firebase authentication with optional local or stack‑based auth",
+        "Superadmin impersonation for internal operations",
+        "Single‑command Docker deployment for production and local development"
+      ],
+      "stack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Python",
+        "FastAPI",
+        "ARQ",
+        "PostgreSQL",
+        "pgvector",
+        "Redis",
+        "MinIO",
+        "Docker",
+        "Docker Compose",
+        "Firebase"
+      ],
+      "category": "AI & Voice",
+      "ai": true
+    },
+    {
+      "slug": "DSCASC-Election",
+      "url": "https://github.com/Nagashreeshyl/DSCASC-Election",
+      "homepage": null,
+      "stars": 1,
+      "createdAt": "2026-08-28T17:15:00Z",
+      "pushedAt": "2026-08-29T18:00:29Z",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "pct": 90.3
+        },
+        {
+          "name": "JavaScript",
+          "pct": 9
+        },
+        {
+          "name": "Shell",
+          "pct": 0.4
+        },
+        {
+          "name": "CSS",
+          "pct": 0.3
+        }
+      ],
+      "title": "DSCASC — Class Representative Election Platform",
+      "tagline": "Secure online platform for class representative elections",
+      "summary": "The system provides an institutional web application for conducting class representative elections. It supports multiple independent elections, each with its own candidates, authorities, votes, results and schedule. Users interact through role‑aware dashboards for admins, teachers, candidates and students.",
+      "problem": "Educational institutions need a reliable way to run internal elections that prevents duplicate voting, protects vote secrecy, and applies weighted voting rules across different stakeholder groups.",
+      "howItWorks": [
+        "Users sign in with Google via Firebase Authentication and receive a role claim validated against invitation records.",
+        "The Next.js front end renders role‑specific pages and communicates with Cloud Firestore, where elections, candidates, and votes are stored.",
+        "Vote documents are created with a Firestore transaction and cannot be updated or deleted, ensuring a single vote per user.",
+        "Candidate profile images are uploaded directly to Cloudinary after obtaining a server‑signed request from an API route.",
+        "Results are calculated from stored votes using a weighted formula and written to a protected result document.",
+        "QR codes link to public election pages but still require authenticated access before voting."
+      ],
+      "highlights": [
+        "Immutable vote documents enforce one‑time voting even across page refreshes or multiple tabs.",
+        "Firestore security rules restrict data access by role and enforce admin email checks on the server side.",
+        "Server‑only Cloudinary signing keeps API secrets out of the browser.",
+        "Weighted result logic combines student votes (70%) with authority votes (10% each) per gender category.",
+        "RoleGuard component and server rules together protect admin and teacher dashboards."
+      ],
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Firebase Authentication",
+        "Cloud Firestore",
+        "Cloudinary",
+        "Zod",
+        "React Hook Form",
+        "Framer Motion",
+        "Canvas Confetti",
+        "Lucide-react",
+        "react-day-picker"
+      ],
+      "category": "Full-stack",
+      "ai": true,
+      "private": false,
+      "live": null
+    },
+    {
+      "slug": "code-port",
+      "url": "https://github.com/Nagashreeshyl/code-port",
+      "homepage": null,
+      "stars": 0,
+      "createdAt": "2026-06-24T11:00:47Z",
+      "pushedAt": "2026-06-24T11:33:30Z",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "pct": 96.6
+        },
+        {
+          "name": "CSS",
+          "pct": 2.8
+        },
+        {
+          "name": "JavaScript",
+          "pct": 0.6
+        }
+      ],
+      "title": "Code Port",
+      "tagline": "Resume builder that generates previews, PDFs, and 3D portfolio sites via AI interview.",
+      "summary": "Code Port lets users create a resume through a guided AI interview. The app provides a live‑updating preview, a server‑generated PDF download, and an animated 3D portfolio website. It targets users who want a modern, interactive presentation of their work.",
+      "problem": "",
+      "howItWorks": [
+        "The front end is built with Next.js App Router and renders the UI with React components.",
+        "User responses are collected via a guided AI interview that calls the GROQ API when an API key is provided, otherwise a deterministic local flow is used.",
+        "Responses are stored in Supabase, which also supplies data for the live preview.",
+        "The preview updates in real time and can be exported as a PDF using React PDF on the server.",
+        "An animated 3D portfolio is rendered with React Three Fiber and Drei, with motion handled by Framer Motion."
+      ],
+      "highlights": [
+        "Falls back to a deterministic local interview flow when the GROQ API key is missing.",
+        "Generates a server‑side PDF of the resume using React PDF."
+      ],
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "React Three Fiber",
+        "@react-three/drei",
+        "three.js",
+        "@react-pdf/renderer",
+        "Supabase",
+        "GROQ SDK",
+        "Zod",
+        "clsx",
+        "ESLint"
+      ],
+      "category": "Full-stack",
+      "ai": true,
+      "private": false,
+      "live": null
+    },
+    {
+      "slug": "Pow-Protocol",
+      "url": "https://github.com/Nagashreeshyl/Pow-Protocol",
+      "homepage": "https://powprotocol.vercel.app/",
+      "stars": 0,
+      "createdAt": "2026-03-10T15:42:39Z",
+      "pushedAt": "2026-03-11T04:48:32Z",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "pct": 96.1
+        },
+        {
+          "name": "CSS",
+          "pct": 3.2
+        },
+        {
+          "name": "JavaScript",
+          "pct": 0.7
+        }
+      ],
+      "title": "Pow Protocol",
+      "tagline": "Next.js application with Firebase, GitHub integration, and data visualization",
+      "summary": "A Next.js 16 project using TypeScript, React 19, and Tailwind CSS. Integrates Firebase for backend services, Octokit for GitHub API access, and Chart.js with Mermaid for data visualization and diagramming.",
+      "problem": "",
+      "howItWorks": [
+        "Built on Next.js App Router with TypeScript",
+        "Uses Firebase for authentication and data storage",
+        "Communicates with GitHub via Octokit REST client",
+        "Renders charts with Chart.js and diagrams with Mermaid"
+      ],
+      "highlights": [],
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "Firebase",
+        "Octokit",
+        "Chart.js",
+        "Mermaid",
+        "Groq SDK",
+        "Framer Motion"
+      ],
+      "category": "Full-stack",
+      "ai": true,
+      "private": false,
+      "live": {
+        "url": "https://powprotocol.vercel.app/",
+        "embeddable": true,
+        "shot": null,
+        "checkedAt": "2026-10-30T21:21:18.768Z"
+      }
+    },
     {
       "slug": "Yogstra",
       "url": "https://github.com/Nagashreeshyl/Yogstra",
@@ -108,170 +371,9 @@
         "oxlint"
       ],
       "category": "Full-stack",
-      "ai": true
-    },
-    {
-      "slug": "DSCASC-Election",
-      "url": "https://github.com/Nagashreeshyl/DSCASC-Election",
-      "homepage": null,
-      "stars": 1,
-      "createdAt": "2026-08-28T17:15:00Z",
-      "pushedAt": "2026-08-29T18:00:29Z",
-      "languages": [
-        {
-          "name": "TypeScript",
-          "pct": 90.3
-        },
-        {
-          "name": "JavaScript",
-          "pct": 9
-        },
-        {
-          "name": "Shell",
-          "pct": 0.4
-        },
-        {
-          "name": "CSS",
-          "pct": 0.3
-        }
-      ],
-      "title": "DSCASC — Class Representative Election Platform",
-      "tagline": "Secure online platform for class representative elections",
-      "summary": "The system provides an institutional web application for conducting class representative elections. It supports multiple independent elections, each with its own candidates, authorities, votes, results and schedule. Users interact through role‑aware dashboards for admins, teachers, candidates and students.",
-      "problem": "Educational institutions need a reliable way to run internal elections that prevents duplicate voting, protects vote secrecy, and applies weighted voting rules across different stakeholder groups.",
-      "howItWorks": [
-        "Users sign in with Google via Firebase Authentication and receive a role claim validated against invitation records.",
-        "The Next.js front end renders role‑specific pages and communicates with Cloud Firestore, where elections, candidates, and votes are stored.",
-        "Vote documents are created with a Firestore transaction and cannot be updated or deleted, ensuring a single vote per user.",
-        "Candidate profile images are uploaded directly to Cloudinary after obtaining a server‑signed request from an API route.",
-        "Results are calculated from stored votes using a weighted formula and written to a protected result document.",
-        "QR codes link to public election pages but still require authenticated access before voting."
-      ],
-      "highlights": [
-        "Immutable vote documents enforce one‑time voting even across page refreshes or multiple tabs.",
-        "Firestore security rules restrict data access by role and enforce admin email checks on the server side.",
-        "Server‑only Cloudinary signing keeps API secrets out of the browser.",
-        "Weighted result logic combines student votes (70%) with authority votes (10% each) per gender category.",
-        "RoleGuard component and server rules together protect admin and teacher dashboards."
-      ],
-      "stack": [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Firebase Authentication",
-        "Cloud Firestore",
-        "Cloudinary",
-        "Zod",
-        "React Hook Form",
-        "Framer Motion",
-        "Canvas Confetti",
-        "Lucide-react",
-        "react-day-picker"
-      ],
-      "category": "Full-stack",
-      "ai": true
-    },
-    {
-      "slug": "code-port",
-      "url": "https://github.com/Nagashreeshyl/code-port",
-      "homepage": null,
-      "stars": 0,
-      "createdAt": "2026-06-24T11:00:47Z",
-      "pushedAt": "2026-06-24T11:33:30Z",
-      "languages": [
-        {
-          "name": "TypeScript",
-          "pct": 96.6
-        },
-        {
-          "name": "CSS",
-          "pct": 2.8
-        },
-        {
-          "name": "JavaScript",
-          "pct": 0.6
-        }
-      ],
-      "title": "Code Port",
-      "tagline": "Resume builder that generates previews, PDFs, and 3D portfolio sites via AI interview.",
-      "summary": "Code Port lets users create a resume through a guided AI interview. The app provides a live‑updating preview, a server‑generated PDF download, and an animated 3D portfolio website. It targets users who want a modern, interactive presentation of their work.",
-      "problem": "",
-      "howItWorks": [
-        "The front end is built with Next.js App Router and renders the UI with React components.",
-        "User responses are collected via a guided AI interview that calls the GROQ API when an API key is provided, otherwise a deterministic local flow is used.",
-        "Responses are stored in Supabase, which also supplies data for the live preview.",
-        "The preview updates in real time and can be exported as a PDF using React PDF on the server.",
-        "An animated 3D portfolio is rendered with React Three Fiber and Drei, with motion handled by Framer Motion."
-      ],
-      "highlights": [
-        "Falls back to a deterministic local interview flow when the GROQ API key is missing.",
-        "Generates a server‑side PDF of the resume using React PDF."
-      ],
-      "stack": [
-        "Next.js",
-        "TypeScript",
-        "React",
-        "Tailwind CSS",
-        "Framer Motion",
-        "React Three Fiber",
-        "@react-three/drei",
-        "three.js",
-        "@react-pdf/renderer",
-        "Supabase",
-        "GROQ SDK",
-        "Zod",
-        "clsx",
-        "ESLint"
-      ],
-      "category": "Full-stack",
-      "ai": true
-    },
-    {
-      "slug": "Pow-Protocol",
-      "url": "https://github.com/Nagashreeshyl/Pow-Protocol",
-      "homepage": "https://powprotocol.vercel.app/",
-      "stars": 0,
-      "createdAt": "2026-03-10T15:42:39Z",
-      "pushedAt": "2026-03-11T04:48:32Z",
-      "languages": [
-        {
-          "name": "TypeScript",
-          "pct": 96.1
-        },
-        {
-          "name": "CSS",
-          "pct": 3.2
-        },
-        {
-          "name": "JavaScript",
-          "pct": 0.7
-        }
-      ],
-      "title": "Pow Protocol",
-      "tagline": "Next.js application with Firebase, GitHub integration, and data visualization",
-      "summary": "A Next.js 16 project using TypeScript, React 19, and Tailwind CSS. Integrates Firebase for backend services, Octokit for GitHub API access, and Chart.js with Mermaid for data visualization and diagramming.",
-      "problem": "",
-      "howItWorks": [
-        "Built on Next.js App Router with TypeScript",
-        "Uses Firebase for authentication and data storage",
-        "Communicates with GitHub via Octokit REST client",
-        "Renders charts with Chart.js and diagrams with Mermaid"
-      ],
-      "highlights": [],
-      "stack": [
-        "Next.js",
-        "TypeScript",
-        "React",
-        "Tailwind CSS",
-        "Firebase",
-        "Octokit",
-        "Chart.js",
-        "Mermaid",
-        "Groq SDK",
-        "Framer Motion"
-      ],
-      "category": "Full-stack",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "Quintyx",
@@ -316,7 +418,9 @@
         "Vercel"
       ],
       "category": "Full-stack",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "dsiqrcodegenerator",
@@ -367,7 +471,9 @@
         "Zod"
       ],
       "category": "Tools",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "voca",
@@ -409,7 +515,9 @@
         "Shell"
       ],
       "category": "AI & Voice",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "prompt-labs",
@@ -472,7 +580,9 @@
         "ESLint"
       ],
       "category": "Tools",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "repobank",
@@ -527,7 +637,9 @@
         "Vitest"
       ],
       "category": "Full-stack",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "nbook-folio",
@@ -587,7 +699,9 @@
         "ESLint"
       ],
       "category": "Full-stack",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "ai-browser-harness",
@@ -640,7 +754,9 @@
         "cloudflared (optional tunnel)"
       ],
       "category": "Tools",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "birthday-gift-studio",
@@ -696,7 +812,9 @@
         "Vercel Blob"
       ],
       "category": "Full-stack",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "visual-code-lab",
@@ -748,7 +866,9 @@
         "idb-keyval"
       ],
       "category": "Tools",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "nexus-logistics",
@@ -818,7 +938,9 @@
         "pydantic"
       ],
       "category": "Full-stack",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "learnathon-decrypt-challenge",
@@ -876,7 +998,9 @@
         "jszip"
       ],
       "category": "Tools",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "endescript",
@@ -931,7 +1055,9 @@
         "Docker"
       ],
       "category": "Security",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "ghostchat",
@@ -982,7 +1108,9 @@
         "IndexedDB"
       ],
       "category": "Systems",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "vacai",
@@ -1054,7 +1182,9 @@
         "CSS"
       ],
       "category": "AI & Voice",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     },
     {
       "slug": "Mediscribe",
@@ -1108,7 +1238,14 @@
         "Vercel"
       ],
       "category": "Full-stack",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": {
+        "url": "https://mediscribe-acharya.vercel.app",
+        "embeddable": true,
+        "shot": "/shots/Mediscribe.png",
+        "checkedAt": "2026-10-30T21:21:20.627Z"
+      }
     },
     {
       "slug": "langp",
@@ -1171,7 +1308,9 @@
         "PowerShell"
       ],
       "category": "Tools",
-      "ai": true
+      "ai": true,
+      "private": false,
+      "live": null
     }
   ],
   "skills": [
@@ -1181,10 +1320,11 @@
         {
           "name": "TypeScript",
           "projects": [
-            "Yogstra",
+            "vachlabs",
             "DSCASC-Election",
             "code-port",
             "Pow-Protocol",
+            "Yogstra",
             "dsiqrcodegenerator",
             "prompt-labs",
             "repobank",
@@ -1211,6 +1351,7 @@
         {
           "name": "Python",
           "projects": [
+            "vachlabs",
             "nexus-logistics"
           ]
         },
@@ -1240,6 +1381,20 @@
             "ai-browser-harness",
             "endescript"
           ]
+        },
+        {
+          "name": "HTML",
+          "projects": [
+            "Quintyx",
+            "vacai"
+          ]
+        },
+        {
+          "name": "CSS",
+          "projects": [
+            "Quintyx",
+            "vacai"
+          ]
         }
       ]
     },
@@ -1249,10 +1404,11 @@
         {
           "name": "React",
           "projects": [
-            "Yogstra",
+            "vachlabs",
             "DSCASC-Election",
             "code-port",
             "Pow-Protocol",
+            "Yogstra",
             "dsiqrcodegenerator",
             "prompt-labs",
             "repobank",
@@ -1268,6 +1424,7 @@
         {
           "name": "Next.js",
           "projects": [
+            "vachlabs",
             "DSCASC-Election",
             "code-port",
             "Pow-Protocol",
@@ -1293,10 +1450,11 @@
         {
           "name": "Tailwind CSS",
           "projects": [
-            "Yogstra",
+            "vachlabs",
             "DSCASC-Election",
             "code-port",
             "Pow-Protocol",
+            "Yogstra",
             "dsiqrcodegenerator",
             "prompt-labs",
             "repobank",
@@ -1310,29 +1468,13 @@
           ]
         },
         {
-          "name": "HTML",
+          "name": "Framer Motion",
           "projects": [
-            "Quintyx",
-            "vacai"
-          ]
-        },
-        {
-          "name": "CSS",
-          "projects": [
-            "Quintyx",
-            "vacai"
-          ]
-        },
-        {
-          "name": "React Router",
-          "projects": [
-            "Yogstra"
-          ]
-        },
-        {
-          "name": "Tiptap",
-          "projects": [
-            "nbook-folio"
+            "DSCASC-Election",
+            "code-port",
+            "Pow-Protocol",
+            "birthday-gift-studio",
+            "visual-code-lab"
           ]
         },
         {
@@ -1350,6 +1492,24 @@
             "repobank",
             "learnathon-decrypt-challenge"
           ]
+        },
+        {
+          "name": "React Router",
+          "projects": [
+            "Yogstra"
+          ]
+        },
+        {
+          "name": "Three.js",
+          "projects": [
+            "code-port"
+          ]
+        },
+        {
+          "name": "Tiptap",
+          "projects": [
+            "nbook-folio"
+          ]
         }
       ]
     },
@@ -1357,15 +1517,47 @@
       "name": "Backend & Data",
       "skills": [
         {
+          "name": "FastAPI",
+          "projects": [
+            "vachlabs",
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "PostgreSQL",
+          "projects": [
+            "vachlabs",
+            "Yogstra",
+            "vacai"
+          ]
+        },
+        {
+          "name": "Redis",
+          "projects": [
+            "vachlabs",
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "Docker",
+          "projects": [
+            "vachlabs",
+            "nexus-logistics",
+            "endescript",
+            "vacai"
+          ]
+        },
+        {
           "name": "Supabase",
           "projects": [
-            "Yogstra",
-            "code-port"
+            "code-port",
+            "Yogstra"
           ]
         },
         {
           "name": "Firebase",
           "projects": [
+            "vachlabs",
             "DSCASC-Election",
             "Pow-Protocol",
             "prompt-labs",
@@ -1375,50 +1567,26 @@
           ]
         },
         {
-          "name": "PostgreSQL",
+          "name": "Razorpay",
           "projects": [
             "Yogstra",
             "vacai"
           ]
         },
         {
+          "name": "pgvector",
+          "projects": [
+            "vachlabs"
+          ]
+        },
+        {
+          "name": "MinIO",
+          "projects": [
+            "vachlabs"
+          ]
+        },
+        {
           "name": "SQLite",
-          "projects": [
-            "nexus-logistics"
-          ]
-        },
-        {
-          "name": "Redis",
-          "projects": [
-            "nexus-logistics"
-          ]
-        },
-        {
-          "name": "FastAPI",
-          "projects": [
-            "nexus-logistics"
-          ]
-        },
-        {
-          "name": "Axum",
-          "projects": [
-            "vacai"
-          ]
-        },
-        {
-          "name": "SQLX",
-          "projects": [
-            "vacai"
-          ]
-        },
-        {
-          "name": "Pandas",
-          "projects": [
-            "nexus-logistics"
-          ]
-        },
-        {
-          "name": "NumPy",
           "projects": [
             "nexus-logistics"
           ]
@@ -1428,6 +1596,16 @@
     {
       "name": "AI & Voice",
       "skills": [
+        {
+          "name": "Pipecat",
+          "projects": []
+        },
+        {
+          "name": "LiveKit",
+          "projects": [
+            "Yogstra"
+          ]
+        },
         {
           "name": "Groq",
           "projects": [
@@ -1443,17 +1621,11 @@
           ]
         },
         {
-          "name": "LiveKit",
-          "projects": [
-            "Yogstra"
-          ]
-        },
-        {
-          "name": "Dograh",
+          "name": "Sarvam",
           "projects": []
         },
         {
-          "name": "Sarvam",
+          "name": "Dograh",
           "projects": []
         },
         {
@@ -1480,32 +1652,12 @@
       "name": "Infrastructure & Tooling",
       "skills": [
         {
-          "name": "Docker",
-          "projects": [
-            "nexus-logistics",
-            "endescript",
-            "vacai"
-          ]
-        },
-        {
           "name": "Vercel",
           "projects": [
             "Yogstra",
             "Quintyx",
             "birthday-gift-studio",
             "Mediscribe"
-          ]
-        },
-        {
-          "name": "pnpm",
-          "projects": [
-            "ai-browser-harness"
-          ]
-        },
-        {
-          "name": "GitHub Octokit",
-          "projects": [
-            "Pow-Protocol"
           ]
         },
         {
@@ -1517,34 +1669,52 @@
           ]
         },
         {
+          "name": "Turbopack",
+          "projects": [
+            "prompt-labs"
+          ]
+        },
+        {
+          "name": "pnpm",
+          "projects": [
+            "ai-browser-harness"
+          ]
+        },
+        {
           "name": "Jest",
           "projects": [
             "endescript"
           ]
         },
         {
-          "name": "Vitest",
+          "name": "Chrome MV3 extension",
           "projects": [
-            "repobank",
-            "nbook-folio",
-            "learnathon-decrypt-challenge"
+            "ai-browser-harness"
           ]
         },
         {
-          "name": "Cloudflare R2",
+          "name": "cloudflared",
           "projects": [
-            "vacai"
+            "ai-browser-harness"
           ]
         },
         {
-          "name": "Amazon S3",
+          "name": "OR-Tools",
           "projects": [
-            "vacai"
+            "nexus-logistics"
           ]
         },
         {
-          "name": "Zapier",
-          "projects": []
+          "name": "scikit-learn",
+          "projects": [
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "pandas",
+          "projects": [
+            "nexus-logistics"
+          ]
         }
       ]
     }

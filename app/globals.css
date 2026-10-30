@@ -130,6 +130,30 @@ em { font-style: italic; color: var(--accent); }
 .cover-lg .cover-tag { font-size: 16px; max-width: 46ch; }
 @media (hover: none), (pointer: coarse) { .preview { display: none; } }
 
+.preview .shot { object-fit: cover; object-position: top; opacity: 0; transition: opacity 0.3s; }
+.preview .shot.show { opacity: 1; }
+.live-tag {
+  display: inline-block; vertical-align: middle; margin-left: 10px; padding: 2px 8px 2px 18px; position: relative;
+  font: 500 10px/1.4 var(--font-sans), sans-serif; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent); border: 1px solid currentColor; border-radius: 999px; font-style: normal;
+}
+.live-tag::before { content: ''; position: absolute; left: 7px; top: 50%; width: 5px; height: 5px; margin-top: -2.5px; border-radius: 50%; background: currentColor; }
+@media (prefers-reduced-motion: no-preference) { .live-tag::before { animation: pulse 2s ease-in-out infinite; } }
+
+/* ---------- live preview ---------- */
+.browser { margin-bottom: 56px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--paper-2); box-shadow: 0 40px 80px -40px rgb(0 0 0 / 0.25); }
+.browser-bar { display: flex; align-items: center; gap: 14px; padding: 10px 14px; border-bottom: 1px solid var(--line); font-size: 13px; }
+.browser-dots { display: flex; gap: 6px; }
+.browser-dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+.browser-url { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding: 4px 12px; border-radius: 6px; background: var(--paper); color: var(--ink-2); transition: color 0.2s; }
+.browser-url:hover { color: var(--accent); }
+.browser-toggle { padding: 4px 12px; border: 1px solid var(--ink); border-radius: 999px; font-size: 12px; transition: background 0.25s, color 0.25s; }
+.browser-toggle:hover, .browser-toggle[aria-pressed='true'] { background: var(--ink); color: var(--paper); }
+.browser-view { position: relative; aspect-ratio: 16 / 10; background: var(--paper); }
+.browser-view img { object-fit: cover; object-position: top; }
+.browser-view iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #fff; }
+.muted { color: var(--ink-3); }
+
 /* ---------- skills ---------- */
 .skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 48px 40px; }
 .skill-group h3 { font-size: 26px; padding-bottom: 12px; margin-bottom: 14px; border-bottom: 1px solid var(--ink); }
@@ -196,6 +220,7 @@ em { font-style: italic; color: var(--accent); }
 @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @keyframes rise-full { from { transform: translateY(105%); } to { transform: none; } }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pulse { 50% { opacity: 0.25; } }
 
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }

@@ -18,17 +18,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      # The generator only uses Node built-ins, so no npm install.
+      # The generator only uses Node built-ins (and the runner's preinstalled Chrome for screenshots), so no npm install.
       - run: node scripts/generate.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_READ_TOKEN: ${{ secrets.GH_READ_TOKEN }} # fine-grained, read-only, so private repos like vachlabs can be read
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
       # A commit here triggers the Vercel redeploy.
       - run: |
-          git diff --quiet content/ && exit 0
+          git add content public/shots
+          git diff --cached --quiet && exit 0
           git config user.name 'github-actions[bot]'
           git config user.email '41898283+github-actions[bot]@users.noreply.github.com'
-          git commit -am 'content: sync from GitHub'
+          git commit -m 'content: sync from GitHub'
           git push
