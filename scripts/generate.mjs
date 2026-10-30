@@ -8,7 +8,7 @@ import { promisify } from 'node:util';
 export const USER = 'Nagashreeshyl';
 const OUT = new URL('../content/portfolio.json', import.meta.url);
 // The portfolio's own repo shouldn't list itself as a project.
-const SITE_REPO = process.env.GITHUB_REPOSITORY?.split('/')[1];
+const SITE_REPO = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'portfolio';
 // Private repos to feature anyway. Needs GH_READ_TOKEN with read access to them; their source link is hidden on the site.
 const PRIVATE_REPOS = ['vachlabs'];
 const SHOTS = new URL('../public/shots/', import.meta.url);
