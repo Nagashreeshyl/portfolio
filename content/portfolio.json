@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T21:21:24.574Z",
+  "updatedAt": "2026-10-31T01:34:44.258Z",
   "profileVersion": "2026-10-30T21:18:58Z",
   "profile": {
     "name": "Naga Shreeshyl",
@@ -51,90 +51,6 @@
     "github": "https://github.com/Nagashreeshyl"
   },
   "projects": [
-    {
-      "slug": "vachlabs",
-      "url": "https://github.com/Nagashreeshyl/vachlabs",
-      "homepage": null,
-      "private": true,
-      "stars": 0,
-      "createdAt": "2026-08-23T18:08:29Z",
-      "pushedAt": "2026-09-21T16:26:30Z",
-      "live": null,
-      "languages": [
-        {
-          "name": "Python",
-          "pct": 61.1
-        },
-        {
-          "name": "TypeScript",
-          "pct": 35
-        },
-        {
-          "name": "Shell",
-          "pct": 2
-        },
-        {
-          "name": "JavaScript",
-          "pct": 0.9
-        },
-        {
-          "name": "PowerShell",
-          "pct": 0.5
-        },
-        {
-          "name": "CSS",
-          "pct": 0.2
-        },
-        {
-          "name": "Dockerfile",
-          "pct": 0.2
-        },
-        {
-          "name": "Go Template",
-          "pct": 0.1
-        },
-        {
-          "name": "Mako",
-          "pct": 0
-        }
-      ],
-      "title": "VachLabs",
-      "tagline": "Self‑hosted voice AI platform for building and deploying conversational agents",
-      "summary": "VachLabs provides a visual workflow editor, WebRTC browser testing, and telephony integrations for creating voice assistants. It runs as a full Docker stack with API, UI, PostgreSQL, Redis and MinIO, and supports Firebase authentication. The platform is a fork of Dograh with an updated dashboard and admin features.",
-      "problem": "Teams that need voice assistants often rely on cloud‑only services or fragmented tooling, making it hard to host, customize, and manage the entire stack on their own infrastructure.",
-      "howItWorks": [
-        "A Next.js dashboard lets users design voice agent workflows with nodes, tools, and transitions.",
-        "The backend, built with FastAPI and ARQ workers, executes the defined workflows and communicates with LLM, STT, and TTS providers.",
-        "WebRTC enables direct voice testing from the browser, while Twilio, Vonage, Telnyx, Plivo, and Asterisk ARI support telephony channels.",
-        "Firebase provides email/password and Google sign‑in, with SSR‑safe cookie synchronization.",
-        "All components are orchestrated via Docker Compose, including PostgreSQL (pgvector), Redis, and MinIO for storage."
-      ],
-      "highlights": [
-        "Visual workflow builder with global instructions and tool integration",
-        "Browser‑based voice testing via WebRTC",
-        "Firebase authentication with optional local or stack‑based auth",
-        "Superadmin impersonation for internal operations",
-        "Single‑command Docker deployment for production and local development"
-      ],
-      "stack": [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Python",
-        "FastAPI",
-        "ARQ",
-        "PostgreSQL",
-        "pgvector",
-        "Redis",
-        "MinIO",
-        "Docker",
-        "Docker Compose",
-        "Firebase"
-      ],
-      "category": "AI & Voice",
-      "ai": true
-    },
     {
       "slug": "DSCASC-Election",
       "url": "https://github.com/Nagashreeshyl/DSCASC-Election",
@@ -1315,12 +1231,11 @@
   ],
   "skills": [
     {
-      "name": "Languages",
+      "name": "Stack",
       "skills": [
         {
           "name": "TypeScript",
           "projects": [
-            "vachlabs",
             "DSCASC-Election",
             "code-port",
             "Pow-Protocol",
@@ -1351,72 +1266,21 @@
         {
           "name": "Python",
           "projects": [
-            "vachlabs",
             "nexus-logistics"
           ]
         },
         {
-          "name": "Swift",
-          "projects": [
-            "voca"
-          ]
-        },
-        {
-          "name": "Shell",
-          "projects": [
-            "voca",
-            "langp"
-          ]
-        },
-        {
-          "name": "Rust",
-          "projects": [
-            "vacai",
-            "langp"
-          ]
-        },
-        {
-          "name": "Node.js",
-          "projects": [
-            "ai-browser-harness",
-            "endescript"
-          ]
-        },
-        {
-          "name": "HTML",
-          "projects": [
-            "Quintyx",
-            "vacai"
-          ]
-        },
-        {
-          "name": "CSS",
-          "projects": [
-            "Quintyx",
-            "vacai"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Frontend",
-      "skills": [
-        {
           "name": "React",
           "projects": [
-            "vachlabs",
-            "DSCASC-Election",
             "code-port",
             "Pow-Protocol",
             "Yogstra",
             "dsiqrcodegenerator",
             "prompt-labs",
             "repobank",
-            "nbook-folio",
             "birthday-gift-studio",
             "visual-code-lab",
             "nexus-logistics",
-            "learnathon-decrypt-challenge",
             "endescript",
             "ghostchat"
           ]
@@ -1424,14 +1288,12 @@
         {
           "name": "Next.js",
           "projects": [
-            "vachlabs",
             "DSCASC-Election",
             "code-port",
             "Pow-Protocol",
             "dsiqrcodegenerator",
             "prompt-labs",
             "repobank",
-            "nbook-folio",
             "birthday-gift-studio",
             "visual-code-lab",
             "endescript",
@@ -1450,7 +1312,6 @@
         {
           "name": "Tailwind CSS",
           "projects": [
-            "vachlabs",
             "DSCASC-Election",
             "code-port",
             "Pow-Protocol",
@@ -1458,13 +1319,137 @@
             "dsiqrcodegenerator",
             "prompt-labs",
             "repobank",
-            "nbook-folio",
             "birthday-gift-studio",
             "visual-code-lab",
             "nexus-logistics",
             "learnathon-decrypt-challenge",
             "endescript",
             "Mediscribe"
+          ]
+        },
+        {
+          "name": "FastAPI",
+          "projects": [
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "Pipecat",
+          "projects": []
+        },
+        {
+          "name": "PostgreSQL",
+          "projects": [
+            "Yogstra",
+            "vacai"
+          ]
+        },
+        {
+          "name": "Redis",
+          "projects": [
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "Docker",
+          "projects": [
+            "endescript",
+            "vacai"
+          ]
+        },
+        {
+          "name": "Supabase",
+          "projects": [
+            "code-port",
+            "Yogstra"
+          ]
+        },
+        {
+          "name": "Firebase",
+          "projects": [
+            "Pow-Protocol"
+          ]
+        },
+        {
+          "name": "Razorpay",
+          "projects": [
+            "Yogstra",
+            "vacai"
+          ]
+        },
+        {
+          "name": "LiveKit",
+          "projects": [
+            "Yogstra"
+          ]
+        },
+        {
+          "name": "Groq",
+          "projects": [
+            "Mediscribe"
+          ]
+        },
+        {
+          "name": "Playwright",
+          "projects": [
+            "Yogstra",
+            "prompt-labs",
+            "nbook-folio"
+          ]
+        },
+        {
+          "name": "Vercel",
+          "projects": [
+            "Yogstra",
+            "Quintyx",
+            "Mediscribe"
+          ]
+        },
+        {
+          "name": "Zapier",
+          "projects": []
+        },
+        {
+          "name": "Dograh",
+          "projects": []
+        },
+        {
+          "name": "Sarvam",
+          "projects": []
+        },
+        {
+          "name": "Firebase Authentication",
+          "projects": [
+            "DSCASC-Election"
+          ]
+        },
+        {
+          "name": "Cloud Firestore",
+          "projects": [
+            "DSCASC-Election"
+          ]
+        },
+        {
+          "name": "Cloudinary",
+          "projects": [
+            "DSCASC-Election"
+          ]
+        },
+        {
+          "name": "Zod",
+          "projects": [
+            "DSCASC-Election",
+            "code-port",
+            "dsiqrcodegenerator",
+            "nbook-folio",
+            "birthday-gift-studio",
+            "visual-code-lab"
+          ]
+        },
+        {
+          "name": "React Hook Form",
+          "projects": [
+            "DSCASC-Election"
           ]
         },
         {
@@ -1480,17 +1465,86 @@
         {
           "name": "Canvas Confetti",
           "projects": [
-            "DSCASC-Election",
-            "birthday-gift-studio"
+            "DSCASC-Election"
           ]
         },
         {
-          "name": "Lucide React",
+          "name": "Lucide-react",
           "projects": [
             "DSCASC-Election",
             "prompt-labs",
-            "repobank",
-            "learnathon-decrypt-challenge"
+            "repobank"
+          ]
+        },
+        {
+          "name": "react-day-picker",
+          "projects": [
+            "DSCASC-Election"
+          ]
+        },
+        {
+          "name": "React Three Fiber",
+          "projects": [
+            "code-port"
+          ]
+        },
+        {
+          "name": "@react-three/drei",
+          "projects": [
+            "code-port"
+          ]
+        },
+        {
+          "name": "three.js",
+          "projects": [
+            "code-port"
+          ]
+        },
+        {
+          "name": "@react-pdf/renderer",
+          "projects": [
+            "code-port"
+          ]
+        },
+        {
+          "name": "GROQ SDK",
+          "projects": [
+            "code-port",
+            "Pow-Protocol"
+          ]
+        },
+        {
+          "name": "clsx",
+          "projects": [
+            "code-port"
+          ]
+        },
+        {
+          "name": "ESLint",
+          "projects": [
+            "code-port",
+            "prompt-labs",
+            "nbook-folio",
+            "endescript"
+          ]
+        },
+        {
+          "name": "Octokit",
+          "projects": [
+            "Pow-Protocol"
+          ]
+        },
+        {
+          "name": "Chart.js",
+          "projects": [
+            "Pow-Protocol"
+          ]
+        },
+        {
+          "name": "Mermaid",
+          "projects": [
+            "Pow-Protocol",
+            "visual-code-lab"
           ]
         },
         {
@@ -1500,172 +1554,67 @@
           ]
         },
         {
-          "name": "Three.js",
-          "projects": [
-            "code-port"
-          ]
-        },
-        {
-          "name": "Tiptap",
-          "projects": [
-            "nbook-folio"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Backend & Data",
-      "skills": [
-        {
-          "name": "FastAPI",
-          "projects": [
-            "vachlabs",
-            "nexus-logistics"
-          ]
-        },
-        {
-          "name": "PostgreSQL",
-          "projects": [
-            "vachlabs",
-            "Yogstra",
-            "vacai"
-          ]
-        },
-        {
-          "name": "Redis",
-          "projects": [
-            "vachlabs",
-            "nexus-logistics"
-          ]
-        },
-        {
-          "name": "Docker",
-          "projects": [
-            "vachlabs",
-            "nexus-logistics",
-            "endescript",
-            "vacai"
-          ]
-        },
-        {
-          "name": "Supabase",
-          "projects": [
-            "code-port",
-            "Yogstra"
-          ]
-        },
-        {
-          "name": "Firebase",
-          "projects": [
-            "vachlabs",
-            "DSCASC-Election",
-            "Pow-Protocol",
-            "prompt-labs",
-            "repobank",
-            "nbook-folio",
-            "Mediscribe"
-          ]
-        },
-        {
-          "name": "Razorpay",
-          "projects": [
-            "Yogstra",
-            "vacai"
-          ]
-        },
-        {
-          "name": "pgvector",
-          "projects": [
-            "vachlabs"
-          ]
-        },
-        {
-          "name": "MinIO",
-          "projects": [
-            "vachlabs"
-          ]
-        },
-        {
-          "name": "SQLite",
-          "projects": [
-            "nexus-logistics"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "AI & Voice",
-      "skills": [
-        {
-          "name": "Pipecat",
-          "projects": []
-        },
-        {
-          "name": "LiveKit",
+          "name": "oxlint",
           "projects": [
             "Yogstra"
           ]
         },
         {
-          "name": "Groq",
+          "name": "HTML",
           "projects": [
-            "code-port",
-            "Pow-Protocol",
-            "Mediscribe"
-          ]
-        },
-        {
-          "name": "OpenRouter",
-          "projects": [
-            "Mediscribe"
-          ]
-        },
-        {
-          "name": "Sarvam",
-          "projects": []
-        },
-        {
-          "name": "Dograh",
-          "projects": []
-        },
-        {
-          "name": "Twilio",
-          "projects": [
-            "vacai"
-          ]
-        },
-        {
-          "name": "Plivo",
-          "projects": [
-            "vacai"
-          ]
-        },
-        {
-          "name": "Google Gemini Live",
-          "projects": [
-            "vacai"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Infrastructure & Tooling",
-      "skills": [
-        {
-          "name": "Vercel",
-          "projects": [
-            "Yogstra",
             "Quintyx",
-            "birthday-gift-studio",
-            "Mediscribe"
+            "vacai"
           ]
         },
         {
-          "name": "Playwright",
+          "name": "CSS",
           "projects": [
-            "Yogstra",
+            "Quintyx",
+            "vacai"
+          ]
+        },
+        {
+          "name": "qrcode.react",
+          "projects": [
+            "dsiqrcodegenerator"
+          ]
+        },
+        {
+          "name": "html-to-image",
+          "projects": [
+            "dsiqrcodegenerator"
+          ]
+        },
+        {
+          "name": "react-hook-form",
+          "projects": [
+            "dsiqrcodegenerator"
+          ]
+        },
+        {
+          "name": "Swift",
+          "projects": [
+            "voca"
+          ]
+        },
+        {
+          "name": "Shell",
+          "projects": [
+            "voca",
+            "langp"
+          ]
+        },
+        {
+          "name": "Firebase Auth",
+          "projects": [
             "prompt-labs",
-            "nbook-folio"
+            "repobank"
+          ]
+        },
+        {
+          "name": "Firestore",
+          "projects": [
+            "prompt-labs"
           ]
         },
         {
@@ -1675,27 +1624,132 @@
           ]
         },
         {
+          "name": "Firebase Cloud Firestore",
+          "projects": [
+            "repobank"
+          ]
+        },
+        {
+          "name": "Firebase Admin SDK",
+          "projects": [
+            "repobank"
+          ]
+        },
+        {
+          "name": "Vitest",
+          "projects": [
+            "repobank",
+            "nbook-folio",
+            "learnathon-decrypt-challenge"
+          ]
+        },
+        {
+          "name": "Next.js 15",
+          "projects": [
+            "nbook-folio"
+          ]
+        },
+        {
+          "name": "React 19",
+          "projects": [
+            "nbook-folio",
+            "learnathon-decrypt-challenge"
+          ]
+        },
+        {
+          "name": "Tailwind CSS 4",
+          "projects": [
+            "nbook-folio"
+          ]
+        },
+        {
+          "name": "Firebase (Firestore, Storage, Admin SDK)",
+          "projects": [
+            "nbook-folio"
+          ]
+        },
+        {
+          "name": "Tiptap 2",
+          "projects": [
+            "nbook-folio"
+          ]
+        },
+        {
+          "name": "CodeMirror 6",
+          "projects": [
+            "nbook-folio"
+          ]
+        },
+        {
+          "name": "Shiki",
+          "projects": [
+            "nbook-folio"
+          ]
+        },
+        {
+          "name": "tldraw",
+          "projects": [
+            "nbook-folio"
+          ]
+        },
+        {
+          "name": "KaTeX",
+          "projects": [
+            "nbook-folio"
+          ]
+        },
+        {
+          "name": "Node.js (>=20)",
+          "projects": [
+            "ai-browser-harness"
+          ]
+        },
+        {
           "name": "pnpm",
           "projects": [
             "ai-browser-harness"
           ]
         },
         {
-          "name": "Jest",
-          "projects": [
-            "endescript"
-          ]
-        },
-        {
-          "name": "Chrome MV3 extension",
+          "name": "Chrome MV3 extension (HTML, CSS, JavaScript)",
           "projects": [
             "ai-browser-harness"
           ]
         },
         {
-          "name": "cloudflared",
+          "name": "MCP (custom local HTTP API)",
           "projects": [
             "ai-browser-harness"
+          ]
+        },
+        {
+          "name": "cloudflared (optional tunnel)",
+          "projects": [
+            "ai-browser-harness"
+          ]
+        },
+        {
+          "name": "Canvas‑confetti",
+          "projects": [
+            "birthday-gift-studio"
+          ]
+        },
+        {
+          "name": "Vercel Blob",
+          "projects": [
+            "birthday-gift-studio"
+          ]
+        },
+        {
+          "name": "Monaco Editor",
+          "projects": [
+            "visual-code-lab"
+          ]
+        },
+        {
+          "name": "idb-keyval",
+          "projects": [
+            "visual-code-lab"
           ]
         },
         {
@@ -1714,6 +1768,194 @@
           "name": "pandas",
           "projects": [
             "nexus-logistics"
+          ]
+        },
+        {
+          "name": "numpy",
+          "projects": [
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "SQLite",
+          "projects": [
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "OSRM",
+          "projects": [
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "Open-Meteo",
+          "projects": [
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "Docker Compose",
+          "projects": [
+            "nexus-logistics",
+            "vacai"
+          ]
+        },
+        {
+          "name": "Leaflet",
+          "projects": [
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "uvicorn",
+          "projects": [
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "pydantic",
+          "projects": [
+            "nexus-logistics"
+          ]
+        },
+        {
+          "name": "Web Crypto API",
+          "projects": [
+            "learnathon-decrypt-challenge"
+          ]
+        },
+        {
+          "name": "Lucide React",
+          "projects": [
+            "learnathon-decrypt-challenge"
+          ]
+        },
+        {
+          "name": "jszip",
+          "projects": [
+            "learnathon-decrypt-challenge"
+          ]
+        },
+        {
+          "name": "Node.js",
+          "projects": [
+            "endescript"
+          ]
+        },
+        {
+          "name": "Jest",
+          "projects": [
+            "endescript"
+          ]
+        },
+        {
+          "name": "PeerJS",
+          "projects": [
+            "ghostchat"
+          ]
+        },
+        {
+          "name": "WebRTC",
+          "projects": [
+            "ghostchat"
+          ]
+        },
+        {
+          "name": "IndexedDB",
+          "projects": [
+            "ghostchat"
+          ]
+        },
+        {
+          "name": "Rust",
+          "projects": [
+            "vacai",
+            "langp"
+          ]
+        },
+        {
+          "name": "Axum",
+          "projects": [
+            "vacai"
+          ]
+        },
+        {
+          "name": "Tokio",
+          "projects": [
+            "vacai"
+          ]
+        },
+        {
+          "name": "sqlx",
+          "projects": [
+            "vacai"
+          ]
+        },
+        {
+          "name": "Amazon S3",
+          "projects": [
+            "vacai"
+          ]
+        },
+        {
+          "name": "Cloudflare R2",
+          "projects": [
+            "vacai"
+          ]
+        },
+        {
+          "name": "Google Gemini Live",
+          "projects": [
+            "vacai"
+          ]
+        },
+        {
+          "name": "Plivo",
+          "projects": [
+            "vacai"
+          ]
+        },
+        {
+          "name": "Twilio",
+          "projects": [
+            "vacai"
+          ]
+        },
+        {
+          "name": "shadcn/ui",
+          "projects": [
+            "Mediscribe"
+          ]
+        },
+        {
+          "name": "Firebase (Admin, Firestore)",
+          "projects": [
+            "Mediscribe"
+          ]
+        },
+        {
+          "name": "OpenRouter",
+          "projects": [
+            "Mediscribe"
+          ]
+        },
+        {
+          "name": "RxNorm",
+          "projects": [
+            "Mediscribe"
+          ]
+        },
+        {
+          "name": "openFDA",
+          "projects": [
+            "Mediscribe"
+          ]
+        },
+        {
+          "name": "PowerShell",
+          "projects": [
+            "langp"
           ]
         }
       ]
