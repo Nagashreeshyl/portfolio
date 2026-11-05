@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T01:34:44.258Z",
+  "updatedAt": "2026-11-05T10:48:55.302Z",
   "profileVersion": "2026-10-30T21:18:58Z",
   "profile": {
     "name": "Naga Shreeshyl",
@@ -52,10 +52,64 @@
   },
   "projects": [
     {
+      "slug": "vachlabs",
+      "url": "https://github.com/Nagashreeshyl/vachlabs",
+      "homepage": null,
+      "private": false,
+      "stars": 0,
+      "createdAt": "2026-08-23T18:08:29Z",
+      "pushedAt": "2026-09-21T16:26:30Z",
+      "live": null,
+      "languages": [
+        {
+          "name": "Python",
+          "pct": 100
+        }
+      ],
+      "title": "vachlabs",
+      "tagline": "VachLabs — voice AI platform for building and deploying conversational agents",
+      "summary": "VachLabs — voice AI platform for building and deploying conversational agents",
+      "problem": "",
+      "howItWorks": [],
+      "highlights": [],
+      "stack": [
+        "Python"
+      ],
+      "category": "Tools",
+      "ai": false
+    },
+    {
+      "slug": "vachlabs",
+      "url": "https://github.com/Nagashreeshyl/vachlabs",
+      "homepage": null,
+      "private": false,
+      "stars": 0,
+      "createdAt": "2026-08-23T18:08:29Z",
+      "pushedAt": "2026-09-21T16:26:30Z",
+      "live": null,
+      "languages": [
+        {
+          "name": "Python",
+          "pct": 100
+        }
+      ],
+      "title": "vachlabs",
+      "tagline": "VachLabs — voice AI platform for building and deploying conversational agents",
+      "summary": "VachLabs — voice AI platform for building and deploying conversational agents",
+      "problem": "",
+      "howItWorks": [],
+      "highlights": [],
+      "stack": [
+        "Python"
+      ],
+      "category": "Tools",
+      "ai": false
+    },
+    {
       "slug": "DSCASC-Election",
       "url": "https://github.com/Nagashreeshyl/DSCASC-Election",
       "homepage": null,
-      "stars": 1,
+      "stars": 0,
       "createdAt": "2026-08-28T17:15:00Z",
       "pushedAt": "2026-08-29T18:00:29Z",
       "languages": [
@@ -390,6 +444,60 @@
       "ai": true,
       "private": false,
       "live": null
+    },
+    {
+      "slug": "niftypilot",
+      "url": "https://github.com/Nagashreeshyl/niftypilot",
+      "homepage": null,
+      "private": false,
+      "stars": 0,
+      "createdAt": "2026-11-05T06:12:16Z",
+      "pushedAt": "2026-11-05T06:12:22Z",
+      "live": null,
+      "languages": [
+        {
+          "name": "Python",
+          "pct": 100
+        }
+      ],
+      "title": "niftypilot",
+      "tagline": "",
+      "summary": "",
+      "problem": "",
+      "howItWorks": [],
+      "highlights": [],
+      "stack": [
+        "Python"
+      ],
+      "category": "Tools",
+      "ai": false
+    },
+    {
+      "slug": "YMVA",
+      "url": "https://github.com/Nagashreeshyl/YMVA",
+      "homepage": null,
+      "private": false,
+      "stars": 0,
+      "createdAt": "2026-11-02T21:08:34Z",
+      "pushedAt": "2026-11-04T10:11:52Z",
+      "live": null,
+      "languages": [
+        {
+          "name": "Python",
+          "pct": 100
+        }
+      ],
+      "title": "YMVA",
+      "tagline": "YMVA: Yellow Metal Voice Agent",
+      "summary": "YMVA: Yellow Metal Voice Agent",
+      "problem": "",
+      "howItWorks": [],
+      "highlights": [],
+      "stack": [
+        "Python"
+      ],
+      "category": "Tools",
+      "ai": false
     },
     {
       "slug": "voca",
@@ -1266,6 +1374,10 @@
         {
           "name": "Python",
           "projects": [
+            "vachlabs",
+            "vachlabs",
+            "niftypilot",
+            "YMVA",
             "nexus-logistics"
           ]
         },
