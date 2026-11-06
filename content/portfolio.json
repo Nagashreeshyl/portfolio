@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T18:42:46.806Z",
+  "updatedAt": "2026-11-06T00:11:59.523Z",
   "profileVersion": "2026-10-30T21:18:58Z",
   "profile": {
     "name": "Naga Shreeshyl",
@@ -446,6 +446,33 @@
       "live": null
     },
     {
+      "slug": "YMVA",
+      "url": "https://github.com/Nagashreeshyl/YMVA",
+      "homepage": null,
+      "private": false,
+      "stars": 0,
+      "createdAt": "2026-11-02T21:08:34Z",
+      "pushedAt": "2026-11-05T21:49:54Z",
+      "live": null,
+      "languages": [
+        {
+          "name": "Python",
+          "pct": 100
+        }
+      ],
+      "title": "YMVA",
+      "tagline": "YMVA: Yellow Metal Voice Agent",
+      "summary": "YMVA: Yellow Metal Voice Agent",
+      "problem": "",
+      "howItWorks": [],
+      "highlights": [],
+      "stack": [
+        "Python"
+      ],
+      "category": "Tools",
+      "ai": false
+    },
+    {
       "slug": "niftypilot",
       "url": "https://github.com/Nagashreeshyl/niftypilot",
       "homepage": null,
@@ -463,33 +490,6 @@
       "title": "niftypilot",
       "tagline": "",
       "summary": "",
-      "problem": "",
-      "howItWorks": [],
-      "highlights": [],
-      "stack": [
-        "Python"
-      ],
-      "category": "Tools",
-      "ai": false
-    },
-    {
-      "slug": "YMVA",
-      "url": "https://github.com/Nagashreeshyl/YMVA",
-      "homepage": null,
-      "private": false,
-      "stars": 0,
-      "createdAt": "2026-11-02T21:08:34Z",
-      "pushedAt": "2026-11-04T10:11:52Z",
-      "live": null,
-      "languages": [
-        {
-          "name": "Python",
-          "pct": 100
-        }
-      ],
-      "title": "YMVA",
-      "tagline": "YMVA: Yellow Metal Voice Agent",
-      "summary": "YMVA: Yellow Metal Voice Agent",
       "problem": "",
       "howItWorks": [],
       "highlights": [],
@@ -1376,8 +1376,8 @@
           "projects": [
             "vachlabs",
             "vachlabs",
-            "niftypilot",
             "YMVA",
+            "niftypilot",
             "nexus-logistics"
           ]
         },
