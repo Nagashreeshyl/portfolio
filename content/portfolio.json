@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T09:19:28.218Z",
+  "updatedAt": "2026-11-15T17:05:29.499Z",
   "profileVersion": "2026-10-30T21:18:58Z",
   "profile": {
     "name": "Naga Shreeshyl",
@@ -446,6 +446,53 @@
       "live": null
     },
     {
+      "slug": "nive",
+      "url": "https://github.com/Nagashreeshyl/nive",
+      "homepage": null,
+      "private": false,
+      "stars": 0,
+      "createdAt": "2026-11-14T22:52:40Z",
+      "pushedAt": "2026-11-15T16:08:47Z",
+      "live": null,
+      "languages": [
+        {
+          "name": "Swift",
+          "pct": 100
+        }
+      ],
+      "title": "nive",
+      "tagline": "Free, ad-free music player for iPhone powered by YouTube Music — AutoMix, synced lyrics, Explore. Installs with SideStore.",
+      "summary": "Free, ad-free music player for iPhone powered by YouTube Music — AutoMix, synced lyrics, Explore. Installs with SideStore.",
+      "problem": "",
+      "howItWorks": [],
+      "highlights": [],
+      "stack": [
+        "Swift"
+      ],
+      "category": "Tools",
+      "ai": false
+    },
+    {
+      "slug": "lean-website-kickoff",
+      "url": "https://github.com/Nagashreeshyl/lean-website-kickoff",
+      "homepage": null,
+      "private": false,
+      "stars": 0,
+      "createdAt": "2026-11-15T12:04:24Z",
+      "pushedAt": "2026-11-15T12:07:09Z",
+      "live": null,
+      "languages": [],
+      "title": "lean-website-kickoff",
+      "tagline": "Token-efficient agent skill for professional website kickoffs",
+      "summary": "Token-efficient agent skill for professional website kickoffs",
+      "problem": "",
+      "howItWorks": [],
+      "highlights": [],
+      "stack": [],
+      "category": "Tools",
+      "ai": false
+    },
+    {
       "slug": "nick-clean",
       "url": "https://github.com/Nagashreeshyl/nick-clean",
       "homepage": null,
@@ -468,33 +515,6 @@
       "highlights": [],
       "stack": [
         "Shell"
-      ],
-      "category": "Tools",
-      "ai": false
-    },
-    {
-      "slug": "nive",
-      "url": "https://github.com/Nagashreeshyl/nive",
-      "homepage": null,
-      "private": false,
-      "stars": 0,
-      "createdAt": "2026-11-14T22:52:40Z",
-      "pushedAt": "2026-11-14T23:18:52Z",
-      "live": null,
-      "languages": [
-        {
-          "name": "Swift",
-          "pct": 100
-        }
-      ],
-      "title": "nive",
-      "tagline": "Free, ad-free music player for iPhone powered by YouTube Music — AutoMix, synced lyrics, Explore. Installs with SideStore.",
-      "summary": "Free, ad-free music player for iPhone powered by YouTube Music — AutoMix, synced lyrics, Explore. Installs with SideStore.",
-      "problem": "",
-      "howItWorks": [],
-      "highlights": [],
-      "stack": [
-        "Swift"
       ],
       "category": "Tools",
       "ai": false
@@ -1758,18 +1778,18 @@
           ]
         },
         {
+          "name": "Swift",
+          "projects": [
+            "nive",
+            "voca"
+          ]
+        },
+        {
           "name": "Shell",
           "projects": [
             "nick-clean",
             "voca",
             "langp"
-          ]
-        },
-        {
-          "name": "Swift",
-          "projects": [
-            "nive",
-            "voca"
           ]
         },
         {
