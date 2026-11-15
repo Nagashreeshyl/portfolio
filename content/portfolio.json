@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T21:26:47.190Z",
+  "updatedAt": "2026-11-15T01:52:13.864Z",
   "profileVersion": "2026-10-30T21:18:58Z",
   "profile": {
     "name": "Naga Shreeshyl",
@@ -444,6 +444,60 @@
       "ai": true,
       "private": false,
       "live": null
+    },
+    {
+      "slug": "nick-clean",
+      "url": "https://github.com/Nagashreeshyl/nick-clean",
+      "homepage": null,
+      "private": false,
+      "stars": 0,
+      "createdAt": "2026-11-14T23:31:43Z",
+      "pushedAt": "2026-11-14T23:31:49Z",
+      "live": null,
+      "languages": [
+        {
+          "name": "Shell",
+          "pct": 100
+        }
+      ],
+      "title": "nick-clean",
+      "tagline": "Interactive macOS cleaner for hidden caches and leftover app data",
+      "summary": "Interactive macOS cleaner for hidden caches and leftover app data",
+      "problem": "",
+      "howItWorks": [],
+      "highlights": [],
+      "stack": [
+        "Shell"
+      ],
+      "category": "Tools",
+      "ai": false
+    },
+    {
+      "slug": "nive",
+      "url": "https://github.com/Nagashreeshyl/nive",
+      "homepage": null,
+      "private": false,
+      "stars": 0,
+      "createdAt": "2026-11-14T22:52:40Z",
+      "pushedAt": "2026-11-14T23:18:52Z",
+      "live": null,
+      "languages": [
+        {
+          "name": "Swift",
+          "pct": 100
+        }
+      ],
+      "title": "nive",
+      "tagline": "Free, ad-free music player for iPhone powered by YouTube Music — AutoMix, synced lyrics, Explore. Installs with SideStore.",
+      "summary": "Free, ad-free music player for iPhone powered by YouTube Music — AutoMix, synced lyrics, Explore. Installs with SideStore.",
+      "problem": "",
+      "howItWorks": [],
+      "highlights": [],
+      "stack": [
+        "Swift"
+      ],
+      "category": "Tools",
+      "ai": false
     },
     {
       "slug": "YMVA",
@@ -1704,16 +1758,18 @@
           ]
         },
         {
-          "name": "Swift",
+          "name": "Shell",
           "projects": [
-            "voca"
+            "nick-clean",
+            "voca",
+            "langp"
           ]
         },
         {
-          "name": "Shell",
+          "name": "Swift",
           "projects": [
-            "voca",
-            "langp"
+            "nive",
+            "voca"
           ]
         },
         {
