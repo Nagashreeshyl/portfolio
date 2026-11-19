@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T12:58:48.904Z",
+  "updatedAt": "2026-11-19T21:29:37.728Z",
   "profileVersion": "2026-10-30T21:18:58Z",
   "profile": {
     "name": "Naga Shreeshyl",
@@ -329,28 +329,28 @@
       "live": null
     },
     {
-      "slug": "nive",
-      "url": "https://github.com/Nagashreeshyl/nive",
+      "slug": "lumo",
+      "url": "https://github.com/Nagashreeshyl/lumo",
       "homepage": null,
       "private": false,
       "stars": 0,
       "createdAt": "2026-11-14T22:52:40Z",
-      "pushedAt": "2026-11-15T16:08:47Z",
+      "pushedAt": "2026-11-19T18:45:13Z",
       "live": null,
       "languages": [
         {
-          "name": "Swift",
+          "name": "Kotlin",
           "pct": 100
         }
       ],
-      "title": "nive",
+      "title": "lumo",
       "tagline": "Free, ad-free music player for iPhone powered by YouTube Music — AutoMix, synced lyrics, Explore. Installs with SideStore.",
       "summary": "Free, ad-free music player for iPhone powered by YouTube Music — AutoMix, synced lyrics, Explore. Installs with SideStore.",
       "problem": "",
       "howItWorks": [],
       "highlights": [],
       "stack": [
-        "Swift"
+        "Kotlin"
       ],
       "category": "Tools",
       "ai": false
@@ -1582,10 +1582,9 @@
           ]
         },
         {
-          "name": "Swift",
+          "name": "Kotlin",
           "projects": [
-            "nive",
-            "voca"
+            "lumo"
           ]
         },
         {
@@ -1594,6 +1593,12 @@
             "nick-clean",
             "voca",
             "langp"
+          ]
+        },
+        {
+          "name": "Swift",
+          "projects": [
+            "voca"
           ]
         },
         {
